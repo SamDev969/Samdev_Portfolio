@@ -147,11 +147,29 @@ const menuBtn = document.querySelector(".menu-btn");
 
 const navLinks = document.querySelector(".nav-links");
 
-menuBtn.addEventListener("click",()=>{
+const body = document.body;
 
-    navLinks.classList.toggle("show");
+if(menuBtn && navLinks){
 
-});
+    menuBtn.addEventListener("click",()=>{
+
+        navLinks.classList.toggle("show");
+        body.classList.toggle("menu-open");
+
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link=>{
+
+        link.addEventListener("click",()=>{
+
+            navLinks.classList.remove("show");
+            body.classList.remove("menu-open");
+
+        });
+
+    });
+
+}
 
 
 /*==============================
