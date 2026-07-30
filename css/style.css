@@ -560,8 +560,10 @@ ABOUT PREVIEW
 }
 
 .about-preview video{
-    width:100%;
+    width:60%;
+    max-width:420px;
     display:block;
+    margin:0 auto;
     border-radius:20px;
     box-shadow:var(--shadow);
     object-fit:cover;
