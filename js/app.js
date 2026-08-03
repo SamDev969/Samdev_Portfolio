@@ -50,7 +50,7 @@ new Typed("#typing", {
 
         "Laptop Repair Specialist",
 
-        "Problem Solver",
+        "Graphic Designer",
 
         "Technology Consultant"
 
