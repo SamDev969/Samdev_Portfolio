@@ -1224,6 +1224,11 @@ body {
     border: 1px solid rgba(255,255,255,0.12);
     box-shadow: 0 14px 34px rgba(0,0,0,.22);
     transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+    min-height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .gallery-item::before {
@@ -1236,13 +1241,15 @@ body {
     pointer-events: none;
 }
 
-.gallery-item:hover {
+.gallery-item:hover,
+.gallery-item:focus-visible {
     transform: translateY(-8px);
     border-color: rgba(var(--accent-rgb),.55);
     box-shadow: 0 24px 48px rgba(0,0,0,.38);
 }
 
-.gallery-item:hover::before {
+.gallery-item:hover::before,
+.gallery-item:focus-visible::before {
     transform: translateX(120%);
 }
 
@@ -1250,6 +1257,68 @@ body {
     font-size: 50px;
     color: var(--accent);
     margin-bottom: 15px;
+    transition: opacity .35s ease;
+}
+
+.gallery-item h4 {
+    transition: opacity .35s ease, transform .35s ease;
+}
+
+.gallery-item:hover .gallery-placeholder,
+.gallery-item:focus-visible .gallery-placeholder,
+.gallery-item:hover h4,
+.gallery-item:focus-visible h4 {
+    opacity: 0;
+    transform: scale(.96);
+}
+
+.hover-gallery {
+    position: absolute;
+    inset: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.94);
+    transition: opacity .35s ease, transform .35s ease;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 10px;
+    background: rgba(2, 6, 23, 0.9);
+    border-radius: 14px;
+    backdrop-filter: blur(12px);
+}
+
+.gallery-item:hover .hover-gallery,
+.gallery-item:focus-visible .hover-gallery {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.hover-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.14);
+    box-shadow: 0 8px 18px rgba(0,0,0,.25);
+}
+
+.hover-gallery img:nth-child(1),
+.hover-gallery img:nth-child(2),
+.hover-gallery img:nth-child(3) {
+    min-height: 80px;
+}
+
+.hover-gallery img:nth-child(4),
+.hover-gallery img:nth-child(5),
+.hover-gallery img:nth-child(6) {
+    min-height: 80px;
+}
+
+.hover-gallery img:nth-child(7),
+.hover-gallery img:nth-child(8),
+.hover-gallery img:nth-child(9) {
+    min-height: 80px;
 }
 
 /* Interactive Form */
