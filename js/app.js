@@ -173,50 +173,6 @@ if(menuBtn && navLinks){
 
 
 /*==============================
-HARDWARE SUPPORT HOVER GALLERY
-==============================*/
-
-const hardwareImages = [
-    "image/hardware-support-service.png",
-    "image/hardware-support-service1.png",
-    "image/hardware-support-service2.png",
-    "image/hardware-support-service3.png",
-    "image/hardware-support-service4.png",
-    "image/hardware-support-service5.png",
-    "image/hardware-support-service6.png",
-    "image/hardware-support-service7.png",
-    "image/hardware-support-service8.png",
-    "image/hardware-support-service9.png"
-];
-
-const hardwareGalleryGroups = {
-    "hardware-troubleshooting": [hardwareImages[0], hardwareImages[1], hardwareImages[2]],
-    "computer-maintenance": [hardwareImages[3], hardwareImages[4], hardwareImages[5]],
-    "hardware-installation-upgrades": [hardwareImages[6], hardwareImages[7], hardwareImages[8]],
-    "motherboard-diagnosis": [hardwareImages[9], hardwareImages[0], hardwareImages[3]],
-    "os-software-support": [hardwareImages[4], hardwareImages[6], hardwareImages[8]]
-};
-
-const galleryItems = document.querySelectorAll(".gallery-item");
-
-galleryItems.forEach(item => {
-    const hoverGallery = document.createElement("div");
-    hoverGallery.className = "hover-gallery";
-
-    const serviceType = item.dataset.service || "hardware-troubleshooting";
-    const selectedImages = hardwareGalleryGroups[serviceType] || hardwareImages.slice(0, 3);
-
-    selectedImages.forEach(src => {
-        const img = document.createElement("img");
-        img.src = src;
-        img.alt = `${serviceType.replace(/-/g, " ")} preview`;
-        hoverGallery.appendChild(img);
-    });
-
-    item.appendChild(hoverGallery);
-});
-
-/*==============================
 SMOOTH SCROLL
 ==============================*/
 
