@@ -1305,9 +1305,9 @@ body {
 .hover-gallery {
     position: absolute;
     inset: 10px;
-    opacity: 0;
-    pointer-events: none;
-    transform: scale(.94);
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
     transition: opacity .35s ease, transform .35s ease;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1324,7 +1324,7 @@ body {
 .gallery-item:hover .hover-gallery,
 .gallery-item:focus-visible .hover-gallery {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1.01);
 }
 
 .hover-gallery img {
