@@ -177,16 +177,16 @@ HARDWARE SUPPORT HOVER GALLERY
 ==============================*/
 
 const hardwareImages = [
-    "image/Hardware support service.png",
-    "image/Hardware support service1.png",
-    "image/Hardware support service2.png",
-    "image/Hardware support service3.png",
-    "image/Hardware support service4.png",
-    "image/Hardware support service5.png",
-    "image/Hardware support service6.png",
-    "image/Hardware support service7.png",
-    "image/Hardware support service8.png",
-    "image/Hardware support service9.png"
+    "image/hardware-support-service.png",
+    "image/hardware-support-service1.png",
+    "image/hardware-support-service2.png",
+    "image/hardware-support-service3.png",
+    "image/hardware-support-service4.png",
+    "image/hardware-support-service5.png",
+    "image/hardware-support-service6.png",
+    "image/hardware-support-service7.png",
+    "image/hardware-support-service8.png",
+    "image/hardware-support-service9.png"
 ];
 
 const hardwareGalleryGroups = {
