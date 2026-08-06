@@ -1127,11 +1127,23 @@ height:100%;
         padding:70px 4% 60px;
     }
 
+    .timeline,
+    .timeline-item,
     .timeline-content{
+        max-width:100%;
+        overflow:hidden;
+    }
+
+.timeline-content{
         max-height:none;
-        overflow:visible;
+        overflow:hidden;
         padding:16px 16px;
         cursor:default;
+    }
+
+    .timeline-content::before{
+        display:none;
+        position:absolute;
     }
 
     .timeline-content:hover,
