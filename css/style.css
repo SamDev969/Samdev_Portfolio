@@ -1123,16 +1123,32 @@ height:100%;
         font-size:.95rem;
     }
 
-    .timeline-section{
+.timeline-section{
         padding:70px 4% 60px;
     }
 
     .timeline-content{
+        max-height:none;
+        overflow:visible;
         padding:16px 16px;
+        cursor:default;
+    }
+
+    .timeline-content:hover,
+    .timeline-content:focus-visible{
+        max-height:none;
+        transform:none;
+        box-shadow:0 16px 38px rgba(0,0,0,0.24);
+        border-color:rgba(255,255,255,0.14);
     }
 
     .timeline-content h4{
         font-size:1rem;
+    }
+
+    .timeline-content p,
+    .timeline-content li{
+        opacity:1;
     }
 
     .contact-section .container{
